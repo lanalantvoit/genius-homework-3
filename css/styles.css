@@ -300,8 +300,18 @@ header {
 /* Advantages section */
 
 .section.advantages-section {
-    background: linear-gradient(38.2deg, rgba(43, 127, 255, 0.2) 39.74%, rgba(43, 127, 255, 0) 54.16%, rgba(43, 127, 255, 0) 66.66%);
     text-align: center;
+}
+
+.svg-background {
+    height: auto;
+    position: absolute;
+    top: -170px;
+    left: -110px;
+    z-index: -1;
+    max-width: 1280px;
+    max-height: 1785px;
+    flex-shrink: 0;
 }
 
 
@@ -311,6 +321,8 @@ header {
     max-width: 1060px;
     height: 100%;
     max-height: 377px;
+    position: relative;
+    overflow: visible;
 }
 
 .advantages-icon {
