@@ -50,7 +50,6 @@ body {
     font-size: 18px;
     line-height: 1.17;
     margin: 0;
-    /* background-image: url(../images/bg-header.svg); */
     background-image: url(/images/hero-bg.png);
     background-position: top;
     background-repeat: no-repeat;
@@ -155,7 +154,6 @@ header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* background-color: rgba(255, 255, 255, 0.25); */
 }
 
 .header-nav {
@@ -247,72 +245,69 @@ header {
 .about-container .accent {
     font-weight: 600;}
 
-        .image-container {
-            width: 100%;
-            max-width: 499px;
-            height: 100%;
-            max-height: 695px;
-            position: relative;
-            display: inline-block;
-        }
+.image-container {
+    width: 100%;
+    max-width: 499px;
+    height: 100%;
+    max-height: 695px;
+    position: relative;
+    display: inline-block;
+ }
     
-        .image-container img {
-            width: 100%;
-            height: auto;
-        }
+ .image-container img {
+    width: 100%;
+    height: auto;
+}.star-icon {
+position: absolute;
+background-size: contain;
+background-repeat: no-repeat;}
     
-        .star-icon {
-            position: absolute;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
+.star1 {
+    transform: rotate(50deg);
+    flex-shrink: 0;
+    z-index: 1;
+    top: 5%;
+    left: 100%;
+    fill: var(--color-primary-medium);
+}
     
-         .star1 {
-             transform: rotate(50deg);
-             flex-shrink: 0;
-             z-index: 1;
-             top: 5%;
-             left: 100%;
-             fill: var(--color-primary-medium);
-         }
+.star2 {
+    transform: rotate(-85deg);
+    flex-shrink: 0;
+    fill: var(--color-secondary-medium);
+    z-index: 1;
+    top: 40%;
+    left: 90%;
+}
     
-         .star2 {
-             transform: rotate(-85deg);
-             flex-shrink: 0;
-             fill: var(--color-secondary-medium);
-             z-index: 1;
-             top: 40%;
-             left: 90%;
-         }
-    
-         .star3 {
-             transform: rotate(-279deg);
-             flex-shrink: 0;
-             z-index: 1;
-             top: 50%;
-             left: 10%;
-             fill: var(--color-primary-dark);
-         }
+.star3 {
+    transform: rotate(-279deg);
+    flex-shrink: 0;
+    z-index: 1;
+    top: 50%;
+    left: 10%;
+    fill: var(--color-primary-dark);
+}
 
-        @keyframes starAnimation {
-             0% {
-                 transform: scale(1);
-            }
+@keyframes starAnimation {
+    0% {
+     transform: scale(1);
+    }
         
-            50% {
-                 transform: scale(0.7);
-            }
+    50% {
+     transform: scale(0.7);
+    }
         
-            100% {
-                transform: scale(1);
-            }
-                 }
+    100% {
+      transform: scale(1);
+    }
+ }
         
-        .star1,
-        .star2,
-        .star3 {
-            animation: starAnimation 2s infinite;
-        }
+.star1,
+.star2,
+.star3 {
+    animation: starAnimation 2s infinite;
+}
 
 
 /* Advantages section */
@@ -370,9 +365,6 @@ header {
 
 /* Procedures section */
 
-/* .procedures-container { 
-    
-} */
 .procedures-carousel-container {
     display: flex;
     align-items: center;
@@ -532,7 +524,6 @@ footer {
 .footer-contacts-list li,
 .footer-coryright a {
     margin-bottom: 16px;
-    /* Расстояние между элементами списка */
 }
 
 .adress-link {
