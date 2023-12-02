@@ -50,7 +50,8 @@ body {
     font-size: 18px;
     line-height: 1.17;
     margin: 0;
-    background-image: url(../images/bg-header.svg);
+    /* background-image: url(../images/bg-header.svg); */
+    background-image: url(/images/header-bg.svg);
     background-position: top;
     background-repeat: no-repeat;
 }
@@ -92,8 +93,9 @@ p {
     margin-top: 0px;
 }
 
-a { display: 
-    inline-block;}
+a { display: inline-block;
+    transition: color 0.2s ease;
+}
 
 .section {
     padding-bottom: 96px;
@@ -133,6 +135,7 @@ a { display:
     border-radius: 32px;
     cursor: pointer;
     font-weight: 600;
+    transition: color 0.2s ease;
 }
 
 .button:hover {
@@ -177,6 +180,7 @@ header {
 
 .head-media-icon {
     fill: var(--color-primary-dark);
+    transition: color 0.2s ease;
 }
 
 .head-media-icon:hover {
@@ -263,37 +267,51 @@ header {
             background-repeat: no-repeat;
         }
     
-        .star1 {
-            width: 40px;
-            height: 40px;
-            top: 50px;
-            left: 80px;
-            background-image: url('../images/icons.svg#icon-star');
-            z-index: 2;
-            fill: var(--color-primary-medium);
-            /* Добавьте стили и анимации для первой звезды */
-        }
+         .star1 {
+             transform: rotate(50deg);
+             flex-shrink: 0;
+             z-index: 1;
+             top: 5%;
+             left: 100%;
+             fill: var(--color-primary-medium);
+         }
     
-        .star2 {
-            width: 30px;
-            height: 30px;
-            top: 50px;
-            left: 80px;
-            background-image: url('../images/icons.svg#icon-star');
-            fill: var(--color-primary-dark);
-            z-index: 2;
-            /* Добавьте стили и анимации для второй звезды */
-        }
+         .star2 {
+             transform: rotate(-85deg);
+             flex-shrink: 0;
+             fill: var(--color-secondary-medium);
+             z-index: 1;
+             top: 40%;
+             left: 90%;
+         }
     
+         .star3 {
+             transform: rotate(-279deg);
+             flex-shrink: 0;
+             z-index: 1;
+             top: 50%;
+             left: 10%;
+             fill: var(--color-primary-dark);
+         }
+
+        @keyframes starAnimation {
+             0% {
+                 transform: scale(1);
+            }
+        
+            50% {
+                 transform: scale(0.7);
+            }
+        
+            100% {
+                transform: scale(1);
+            }
+                 }
+        
+        .star1,
+        .star2,
         .star3 {
-            width: 40px;
-            height: 40px;
-            top: 100px;
-            left: 120px;
-            background-image: url('../images/icons.svg#icon-star');
-            z-index: 2;
-            fill: var(--color-secondary-medium);
-            /* Добавьте стили и анимации для третьей звезды */
+            animation: starAnimation 2s infinite;
         }
 
 
@@ -360,6 +378,10 @@ header {
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+.carousel-button:last-child {
+    transform: scaleX(-1);
 }
 
 
@@ -472,7 +494,14 @@ fill: var(--color-primary-dark);
 
 footer {
     background-color: var(--color-primary-dark);
+    background-image: url(/images/footer-bg.png);
     padding: 56px 0;
+    position: relative;
+}
+.footer-decor {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .footer-link {
@@ -486,10 +515,24 @@ footer {
 
 .footer-media-icon {
     fill: var(--color-primary-light);
+    transition: color 0.2s ease;
 }
 
 .footer-media-icon:hover {
     fill: var(--color-primary-medium);
+}
+
+.footer-social-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-nav-list li,
+.footer-contacts-list li,
+.footer-coryright a {
+    margin-bottom: 16px;
+    /* Расстояние между элементами списка */
 }
 
 .adress-link {
